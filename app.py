@@ -53,7 +53,25 @@ def pattern_mega(text):
     for pattern in patterns:
         if re.search(pattern, text, re.IGNORECASE):
             return True
-
+def DiceRoller(sms):    
+    num=[int(s) for s in sms.split() if s.isdigit()] #isolates numbers as set
+    from random import randint #RNG code
+    repeat = 0
+    dice = num[0]
+    pips = num[1]
+    while (repeat < dice): #loop
+        print("You rolled",randint(1,pips))
+        repeat = repeat +1
+    return    
+   
+@handler.add(MessageEvent, message=TextMessage)
+def handle_message(event):
+    if ".d" in event.message.text:
+        content = DiceRoller(event.message.text)
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=content))
+        return 0
 
 def eyny_movie():
     target_url = 'http://www.eyny.com/forum-205-1.html'

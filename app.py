@@ -1,13 +1,7 @@
-
-# coding: utf-8
-
-# In[ ]:
-
-
-import requests
-import re
 import random
-import configparser
+import os
+import sys
+import tempfile
 from flask import Flask, request, abort
 
 from linebot import (
@@ -16,14 +10,23 @@ from linebot import (
 from linebot.exceptions import (
     InvalidSignatureError
 )
-from linebot.models import *
+from linebot.models import (
+    MessageEvent, TextMessage, TextSendMessage,
+)
 
 app = Flask(__name__)
-config = configparser.ConfigParser()
-config.read("config.ini")
 
-line_bot_api = LineBotApi(config['line_bot']['Channel_Access_Token'])
-handler = WebhookHandler(config['line_bot']['Channel_Secret'])
+channel_secret = os.getenv('LINE_CHANNEL_SECRET', None)
+channel_access_token = os.getenv('LINE_CHANNEL_ACCESS_TOKEN', None)
+if channel_secret is None:
+    print('Specify LINE_CHANNEL_SECRET as environment variable.')
+    sys.exit(1)
+if channel_access_token is None:
+    print('Specify LINE_CHANNEL_ACCESS_TOKEN as environment variable.')
+    sys.exit(1)
+
+line_bot_api = LineBotApi(channel_access_token)
+handler = WebhookHandler(channel_secret)
 
 
 @app.route("/callback", methods=['POST'])
@@ -33,7 +36,6 @@ def callback():
 
     # get request body as text
     body = request.get_data(as_text=True)
-    # print("body:",body)
     app.logger.info("Request body: " + body)
 
     # handle webhook body
@@ -42,7 +44,7 @@ def callback():
     except InvalidSignatureError:
         abort(400)
 
-    return 'ok'
+    return 'OK'
 
 def DiceRoller(sms):    
     num=[int(s) for s in sms.split() if s.isdigit()] #isolates numbers as set
@@ -58,12 +60,11 @@ def DiceRoller(sms):
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     if ".d" in event.message.text:
-        content = DiceRoller(event.message.text)
-        line_bot_api.reply_message(
+	content = DiceRoller(event.message.text)
+    	line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=content))
-        return 0
+    	return 0
 
 if __name__ == "__main__":
     app.run()
-

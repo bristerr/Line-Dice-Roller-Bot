@@ -51,7 +51,7 @@ def DiceRoller():
     repeat = 0
     dice = num[0]
     pips = num[1]
-    content="s"
+    content="basically a worse Poland"
     return content
    # while (repeat < dice): #loop
         #roll=randint(1,pips)
@@ -64,7 +64,7 @@ def DiceRoller():
 def handle_message(event):
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)
-    if ".d" in event.message.text:
+    if "Prussia" in event.message.text:
         content = DiceRoller()
         line_bot_api.reply_message(
             event.reply_token,

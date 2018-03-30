@@ -347,7 +347,7 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=content))
         return 0
-    if event.message.text == "近期上映電影":
+    if event.message.text == "ok":
         content = movie()
         line_bot_api.reply_message(
             event.reply_token,
@@ -429,7 +429,7 @@ def handle_message(event):
                 actions=[
                     MessageTemplateAction(
                         label='近期上映電影',
-                        text='近期上映電影'
+                        text='yes'
                     ),
                     MessageTemplateAction(
                         label='eyny',

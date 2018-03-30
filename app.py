@@ -277,7 +277,7 @@ def technews():
     return content
 
 def DiceRoller():
-    sms=event.message.text  
+    sms= 3 5 
     num=[int(s) for s in sms.split() if s.isdigit()] #isolates numbers as set
     from random import randint #RNG code
     repeat = 0

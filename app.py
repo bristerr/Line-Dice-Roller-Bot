@@ -5,7 +5,7 @@ import configparser
 from bs4 import BeautifulSoup
 from flask import Flask, request, abort
 from imgurpython import ImgurClient
-
+from random import randint
 from linebot import (
     LineBotApi, WebhookHandler
 )
@@ -279,17 +279,18 @@ def technews():
 def DiceRoller():
     sms= "2 fives 5"
     num=[int(s) for s in sms.split() if s.isdigit()] #isolates numbers as set
-    from random import randint #RNG code
+    #from random import randint #RNG code
     repeat = 0
     dice = num[0]
     pips = num[1]
     content=[]
-    while (repeat < dice): #loop
-        roll=randint(1,pips)
-        repeat = repeat +1
-        content.append(roll)
-        if (repeat == dice):
-            return content
+    return content
+   # while (repeat < dice): #loop
+        #roll=randint(1,pips)
+        #repeat = repeat +1
+        #content.append(roll)
+        #if (repeat == dice):
+            #return content
 def panx():
     target_url = 'https://panx.asia/'
     print('Start parsing ptt hot....')

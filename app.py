@@ -62,7 +62,7 @@ def DiceRoller():
             #total = sum(value)
             #content+=" and the total was [" + str(total) + "]."
             #print (content)     
-     #return content
+    return content
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):

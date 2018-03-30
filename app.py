@@ -295,7 +295,7 @@ def panx():
 def handle_message(event):
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)
-    if event.message.text == "eyny":
+    if ".d" in event.message.text:
         content = event.message.text
         line_bot_api.reply_message(
             event.reply_token,

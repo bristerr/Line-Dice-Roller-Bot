@@ -56,11 +56,13 @@ def DiceRoller(sms):
         roll=randint(1,pips)
         repeat = repeat +1
         value.append(roll)
-        content+="(" + str(roll) + ")"
+        if (repeat != dice):
+            content+=str(roll) + ", "
+        else: 
+            content+=str(roll)   
         if (repeat == dice):
             total = sum(value)
-            content+=" and the total was [" + str(total) + "]."
-            #print (content)     
+            content+="] and the total was [" + str(total) + "]."   
     return content
 
 @handler.add(MessageEvent, message=TextMessage)

@@ -52,17 +52,17 @@ def DiceRoller():
     dice = num[0]
     pips = num[1]
     content="The roll was "
-    value = []
-    while (repeat < dice): #loop
-        roll=randint(1,pips)
-        repeat = repeat +1
-        value.append(roll)
-        content+="(" + str(roll) + ")"
-        if (repeat == dice):
-            total = sum(value)
-            content+=" and the total was [" + str(total) + "]."
+    #value = []
+    #while (repeat < dice): #loop
+        #roll=randint(1,pips)
+        #repeat = repeat +1
+        #value.append(roll)
+        #content+="(" + str(roll) + ")"
+        #if (repeat == dice):
+            #total = sum(value)
+            #content+=" and the total was [" + str(total) + "]."
             #print (content)     
-     return content
+     #return content
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):

@@ -283,7 +283,7 @@ def DiceRoller():
     repeat = 0
     dice = num[0]
     pips = num[1]
-    content=[]
+    content="s"
     return content
    # while (repeat < dice): #loop
         #roll=randint(1,pips)

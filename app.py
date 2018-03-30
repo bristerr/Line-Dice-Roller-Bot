@@ -419,7 +419,7 @@ def handle_message(event):
         )
         line_bot_api.reply_message(event.reply_token, buttons_template)
         return 0
-    if event.message.text == "電影":
+    if event.message.text == "movie":
         buttons_template = TemplateSendMessage(
             alt_text='電影 template',
             template=ButtonsTemplate(

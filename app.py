@@ -72,7 +72,17 @@ def eyny_movie():
             content += data
     return content
 
-
+def DiceRoller(sms):    
+    num=[int(s) for s in sms.split() if s.isdigit()] #isolates numbers as set
+    from random import randint #RNG code
+    repeat = 0
+    dice = num[0]
+    pips = num[1]
+    while (repeat < dice): #loop
+        print("You rolled",randint(1,pips))
+        repeat = repeat +1
+    return    
+   
 def apple_news():
     target_url = 'http://www.appledaily.com.tw/realtimenews/section/new/'
     head = 'http://www.appledaily.com.tw'
@@ -292,6 +302,14 @@ def panx():
 
 
 @handler.add(MessageEvent, message=TextMessage)
+def handle_message(event):
+    if ".d" in event.message.text:
+        content = DiceRoller(event.message.text)
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=content))
+        return 0
+    
 def handle_message(event):
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)

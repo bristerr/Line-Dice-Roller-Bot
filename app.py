@@ -292,8 +292,6 @@ def DiceRoller():
             print (content)
     return content
 
-p =DiceRoller("9 d. 9")
-
 def panx():
     target_url = 'https://panx.asia/'
     print('Start parsing ptt hot....')

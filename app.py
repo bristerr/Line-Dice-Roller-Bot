@@ -50,7 +50,7 @@ def DiceRoller(sms):
     repeat = 0
     dice = num[0]
     pips = num[1]
-    content="The roll was ["
+    content="You rolled ["
     value = []
     while (repeat < dice): #loop
         roll=randint(1,pips)
@@ -62,14 +62,14 @@ def DiceRoller(sms):
             content+=str(roll)   
         if (repeat == dice):
             total = sum(value)
-            content+="] and the total was [" + str(total) + "]."   
+            content+="] for a total of [" + str(total) + "]."   
     return content
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)
-    if ".dice" in event.message.text:
+    if ".d" in event.message.text:
         sms = event.message.text
         content = DiceRoller(sms)
         line_bot_api.reply_message(

@@ -44,8 +44,7 @@ def callback():
 
     return 'ok'
 
-def DiceRoller():
-    sms= event.message.text
+def DiceRoller(sms):
     num=[int(s) for s in sms.split() if s.isdigit()] #isolates numbers as set
     #from random import randint #RNG code
     repeat = 0
@@ -69,7 +68,8 @@ def handle_message(event):
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)
     if "Slavonic" in event.message.text:
-        content = DiceRoller()
+        sms = event.message.text
+        content = DiceRoller(sms)
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=content))

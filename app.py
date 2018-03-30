@@ -51,14 +51,18 @@ def DiceRoller():
     repeat = 0
     dice = num[0]
     pips = num[1]
-    content="Don't you mean the Orthodox Church?"
-    return content
-   # while (repeat < dice): #loop
-        #roll=randint(1,pips)
-        #repeat = repeat +1
-        #content.append(roll)
-        #if (repeat == dice):
-            #return content
+    content="The roll was "
+    value = []
+    while (repeat < dice): #loop
+        roll=randint(1,pips)
+        repeat = repeat +1
+        value.append(roll)
+        content+="(" + str(roll) + ")"
+        if (repeat == dice):
+            total = sum(value)
+            content+=" and the total was [" + str(total) + "]."
+            #print (content)     
+     return content
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):

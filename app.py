@@ -277,16 +277,22 @@ def technews():
     return content
 
 def DiceRoller():
-    sms=event.message.text
+    sms=event.message.text  
     num=[int(s) for s in sms.split() if s.isdigit()] #isolates numbers as set
     from random import randint #RNG code
     repeat = 0
     dice = num[0]
     pips = num[1]
+    content=[]
     while (repeat < dice): #loop
-        print("You rolled",randint(1,pips))
+        roll=randint(1,pips)
         repeat = repeat +1
-    return   
+        content.append(roll)
+        if (repeat == dice):
+            print (content)
+    return content
+
+p =DiceRoller("9 d. 9")
 
 def panx():
     target_url = 'https://panx.asia/'

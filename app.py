@@ -289,9 +289,7 @@ def DiceRoller():
         repeat = repeat +1
         content.append(roll)
         if (repeat == dice):
-            print (content)
-    return content
-
+            return content
 def panx():
     target_url = 'https://panx.asia/'
     print('Start parsing ptt hot....')

@@ -277,7 +277,7 @@ def technews():
     return content
 
 def DiceRoller():
-    sms= "4 fives 4"
+    sms= "2 fives 5"
     num=[int(s) for s in sms.split() if s.isdigit()] #isolates numbers as set
     from random import randint #RNG code
     repeat = 0
@@ -315,7 +315,7 @@ def handle_message(event):
             TextSendMessage(text=content))
         return 0
     if event.message.text == "蘋果即時新聞":
-        content = apple_news()
+        content = DiceRoller()
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=content))

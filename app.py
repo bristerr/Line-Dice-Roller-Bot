@@ -276,6 +276,17 @@ def technews():
         content += '{}\n{}\n\n'.format(title, link)
     return content
 
+def DiceRoller():
+    sms=event.message.text
+    num=[int(s) for s in sms.split() if s.isdigit()] #isolates numbers as set
+    from random import randint #RNG code
+    repeat = 0
+    dice = num[0]
+    pips = num[1]
+    while (repeat < dice): #loop
+        print("You rolled",randint(1,pips))
+        repeat = repeat +1
+    return   
 
 def panx():
     target_url = 'https://panx.asia/'
@@ -296,7 +307,7 @@ def handle_message(event):
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)
     if ".d" in event.message.text:
-        content = event.message.text
+        content = DiceRoller()
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=content))

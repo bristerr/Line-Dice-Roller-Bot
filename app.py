@@ -45,7 +45,7 @@ def callback():
     return 'ok'
 
 def DiceRoller():
-    sms= "2 fives 5"
+    sms= "event.message.text"
     num=[int(s) for s in sms.split() if s.isdigit()] #isolates numbers as set
     #from random import randint #RNG code
     repeat = 0
@@ -68,7 +68,7 @@ def DiceRoller():
 def handle_message(event):
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)
-    if "Slavonic" in event.message.text:
+    if ".d" in event.message.text:
         content = DiceRoller()
         line_bot_api.reply_message(
             event.reply_token,

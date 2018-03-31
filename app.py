@@ -72,7 +72,7 @@ def Anakin():
 
 def Senate():
     senate = ['I am the senate.', 'No, NO, YOU WILL DIE!', '*Autistic screeching*', 'It\'s treason then.', 'Ironic. He could save others but not himself.', 'Power! UNLIMITED POWER!', 'Have you ever heard the tragedy of Darth Plagueis the Wise?']
-    content = random.choice(anakin)
+    content = random.choice(senate)
     return content 
 
 def Year():

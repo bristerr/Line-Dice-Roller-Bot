@@ -66,7 +66,12 @@ def DiceRoller(sms):
     return content
 
 def Anakin():
-    anakin = ['I have failed you Anakin, I have failed you.', ' Don\'t lecture me Obi-Wan.', 'It\'s over Anakin. I have the high ground.', 'I should have known the Jedi were trying to take over.', 'I hate sand. It\'s course, rough and gets everywhere.', 'From my point of view the Jedi are evil.', 'This is where the fun begins.', 'I have brought peace, security and justice to my new Empire.']
+    anakin = ['I have failed you Anakin, I have failed you.', ' Don\'t lecture me Obi-Wan.', 'It\'s over Anakin. I have the high ground.', 'I should have known the Jedi were trying to take over.', 'I hate sand. It\'s course, rough and gets everywhere.', 'From my point of view the Jedi are evil.', 'This is where the fun begins.', 'I should have known the Jedi were trying to take over', 'I have brought peace, justice and security to my new Empire.']
+    content = random.choice(anakin)
+    return content 
+
+def Senate():
+    senate = ['I am the senate.', 'No, NO, YOU WILL DIE!', '*Autistic screeching*', 'It\'s treason then.', 'Ironic. He could save others but not himself.', 'Power! UNLIMITED POWER!', 'Have you ever heard the tragedy of Darth Plagueis the Wise?']
     content = random.choice(anakin)
     return content 
 
@@ -75,7 +80,7 @@ def Year():
     start = datetime.date(2018, 3, 31)
     today = datetime.date.today()
     end_date = start - today
-    year=end_date.days
+    year=end_date.days '
     content = 1560 + year
     return content
 
@@ -93,6 +98,13 @@ def handle_message(event):
     
     if event.message.text == "anakin":
         content = Anakin()
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=content))
+        return 0
+    
+    if event.message.text == "senate":
+        content = Senate()
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=content))

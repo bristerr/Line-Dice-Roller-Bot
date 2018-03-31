@@ -70,6 +70,15 @@ def Anakin():
     content = random.choice(anakin)
     return content 
 
+def Year():
+    import datetime 
+    start = datetime.date(2018, 3, 31)
+    today = datetime.date.today()
+    end_date = start - today
+    year=end_date.days
+    content = 1560 + year
+    return content
+
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     print("event.reply_token:", event.reply_token)
@@ -81,11 +90,20 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=content))
         return 0
+    
     if event.message.text == "anakin":
         content = Anakin()
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=content))
         return 0
+    
+    if "the year" in event.message.text:
+        content = Year()
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=content))
+        return 0
+    
 if __name__ == '__main__':
     app.run()

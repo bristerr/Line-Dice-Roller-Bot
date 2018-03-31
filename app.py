@@ -66,7 +66,7 @@ def DiceRoller(sms):
     return content
 
 def Anakin():
-    anakin = ['I have failed you Anakin, I have failed you', 'I should have known the Jedi were trying to take over', 'I hate sand', 'From my point of view the Jedi are evil', 'I have brought peace, security and justice to my new Empire']
+    anakin = ['I have failed you Anakin, I have failed you', ' Don\'t lecture me Obi-Wan.', 'I should have known the Jedi were trying to take over', 'I hate sand. It\'s course, rough and gets everywhere.', 'From my point of view the Jedi are evil.', 'This is where the fun begins.', 'I have brought peace, security and justice to my new Empire.']
     content = random.choice(anakin)
     return content 
 

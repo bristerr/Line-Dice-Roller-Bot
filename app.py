@@ -65,6 +65,11 @@ def DiceRoller(sms):
             content+="] for a total of [" + str(total) + "]."   
     return content
 
+def Anakin():
+    anakin = ['I have failed you Anakin, I have failed you', 'I should have known the Jedi were trying to take over', 'I hate sand', 'From my point of view the Jedi are evil', 'I have brought peace, security and justice to my new Empire']
+    content = random.choice(anakin)
+    return content 
+
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     print("event.reply_token:", event.reply_token)
@@ -76,8 +81,8 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=content))
         return 0
-    if event.message.text == "蘋果即時新聞":
-        content = DiceRoller()
+    if event.message.text == "anakin":
+        content = Anakin()
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=content))

@@ -1,1 +1,1 @@
-﻿This is my Dice roller n'stuff bot.
+This code is primarily designed to dynamically respond to dice roll requests from the Line Messanger App. It is connected to a bot using a webhook and the Line API. Esssentially, it responds to a sent message in which it determines a designated number of dice and dice pips and randomly generates a result. In addition to this, it also can respond to key phrases sent by a user and randomly generate a response and track dates. This is a personal project, and I may update it with additional features in the future. 

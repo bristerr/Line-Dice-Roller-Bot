@@ -81,7 +81,7 @@ def Year():
     today = datetime.date.today()
     end_date = today- start
     year=end_date.days
-    content = 1947 + year
+    content = 1950 + year/2
     return content
 
 @handler.add(MessageEvent, message=TextMessage)

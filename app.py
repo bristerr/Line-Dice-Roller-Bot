@@ -85,6 +85,22 @@ def SiegeRoller(sms):
             total = sum(value)
             if (0 < total < 3):
                 month = 1
+            elif (2 < total < 6):
+                month = 2
+            elif (5 < total < 9):
+                month = 3
+            elif (8 < total < 13):
+                month = 4
+            elif (12 < total < 17):
+                month = 5 
+            elif (16 < total < 21):
+                month = 6
+            elif (20 < total < 25):
+                month = 7
+            elif (24 < total < 29):
+                month = 8
+            elif (28 < total < 33):
+                month = 9 
             elif (total == 97):
                 month = 29
             elif (total == 98):

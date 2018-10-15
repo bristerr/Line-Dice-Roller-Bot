@@ -83,7 +83,7 @@ def SiegeRoller(sms):
             content+=str(roll)   
         if (repeat == dice):
             total = sum(value)
-            if (total != 100):
+            if (total == 100):
                 month = 32
             else:
                 month = 1
@@ -121,13 +121,13 @@ def handle_message(event):
             TextSendMessage(text=content))
         return 0
     
-    if ".rs" in event.message.text:
-        sms = event.message.text
-        content = SiegeRoller(sms)
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
+    #if ".rs" in event.message.text:
+        #sms = event.message.text
+        #content = SiegeRoller(sms)
+       # line_bot_api.reply_message(
+         #   event.reply_token,
+       #     TextSendMessage(text=content))
+        #return 0
     
     if event.message.text == "anakin":
         content = Anakin()

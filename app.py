@@ -87,7 +87,7 @@ def SiegeRoller(sms):
                 month = 32
             else:
                 month = 1
-            content+="] for a total of [" + str(total) + "]."
+            content+="] for a total of [" + str(month) + "]."
     return content
 
 def Anakin():

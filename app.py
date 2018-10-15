@@ -65,6 +65,16 @@ def DiceRoller(sms):
             content+="] for a total of [" + str(total) + "]."   
     return content
 
+def SiegeRoller(sms):
+    num=[int(s) for s in sms.split() if s.isdigit()] #isolates numbers as set
+    #from random import randint #RNG code
+    repeat = 0
+    dice = num[0]
+    pips = num[1]
+    content="You rolled ["
+    value = []
+    
+    return content
 
 def Anakin():
     anakin = ['I have failed you Anakin, I have failed you.', ' Don\'t lecture me Obi-Wan.', 'It\'s over Anakin. I have the high ground.', 'I should have known the Jedi were trying to take over.', 'I hate sand. It\'s course, rough and gets everywhere.', 'From my point of view the Jedi are evil.', 'This is where the fun begins.', 'I should have known the Jedi were trying to take over.', 'I have brought peace, justice and security to my new Empire.']

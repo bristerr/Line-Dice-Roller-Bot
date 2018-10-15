@@ -83,10 +83,18 @@ def SiegeRoller(sms):
             content+=str(roll)   
         if (repeat == dice):
             total = sum(value)
-            if (total == 100):
-                month = 100
-            else:
+            if (0 < total < 3):
                 month = 1
+            elif (total == 97):
+                month = 29
+            elif (total == 98):
+                month = 30
+            elif (total == 99):
+                month = 31
+            elif (total == 100):
+                month = 32    
+            else:
+                month = 0
             content+="] for a siege length of " + str(month) + " months."
     return content
 

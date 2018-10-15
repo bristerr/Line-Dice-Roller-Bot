@@ -83,8 +83,7 @@ def SiegeRoller(sms):
             content+=str(roll)   
         if (repeat == dice):
             total = sum(value)
-            
-            content+="] for a total of [" + str(total) + "]. The siege length is "str(total)" months."  
+            content+="] for a total of [" + str(total) + "]."
     return content
 
 def Anakin():

@@ -127,7 +127,7 @@ def SiegeRoller(sms):
                 month = 21 
             elif (79 < total < 82):
                 month = 22
-            elif (83 < total < 86):
+            elif (81 < total < 86):
                 month = 23
             elif (85 < total < 89):
                 month = 24

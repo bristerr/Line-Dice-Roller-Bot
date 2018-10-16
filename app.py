@@ -101,6 +101,44 @@ def SiegeRoller(sms):
                 month = 8
             elif (28 < total < 33):
                 month = 9 
+            elif (32 < total < 37):
+                month = 10
+            elif (36 < total < 41):
+                month = 11
+            elif (40 < total < 45):
+                month = 12
+            elif (44 < total < 50):
+                month = 13
+            elif (49 < total < 55):
+                month = 14
+            elif (54 < total < 60):
+                month = 15
+            elif (59 < total < 65):
+                month = 16
+            elif (64 < total < 69):
+                month = 17
+             elif (68 < total < 73):
+                month = 18
+            elif (72 < total < 76):
+                month = 19
+            elif (75 < total < 78):
+                month = 20
+            elif (77 < total < 80):
+                month = 21 
+            elif (79 < total < 82):
+                month = 22
+            elif (83 < total < 86):
+                month = 23
+            elif (85 < total < 89):
+                month = 24
+            elif (88 < total < 91):
+                month = 25 
+               elif (90 < total < 93):
+                month = 26
+            elif (92 < total < 95):
+                month = 27
+            elif (94 < total < 97):
+                month = 28    
             elif (total == 97):
                 month = 29
             elif (total == 98):

@@ -1,7 +1,6 @@
 import requests
 import re
 import random
-random.seed(datetime.now())
 import configparser
 from bs4 import BeautifulSoup
 from flask import Flask, request, abort

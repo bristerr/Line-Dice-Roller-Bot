@@ -25,7 +25,7 @@ client_secret = config['imgur_api']['Client_Secret']
 album_id = config['imgur_api']['Album_ID']
 API_Get_Image = config['other_api']['API_Get_Image']
 
-
+srand(getpid()); #set seed
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value

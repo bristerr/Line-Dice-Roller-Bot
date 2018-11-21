@@ -161,6 +161,10 @@ def Senate():
     content = random.choice(senate)
     return content 
 
+def Open():
+    content = 'Iberia/Maghreb: \n Badajoz'
+
+
 def Year():
     import datetime 
     start = datetime.date(2018, 10, 12)
@@ -199,6 +203,13 @@ def handle_message(event):
     
     if event.message.text == "senate":
         content = Senate()
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=content))
+        return 0
+    
+    if event.message.text == "What's open?":
+        content = Open()
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=content))

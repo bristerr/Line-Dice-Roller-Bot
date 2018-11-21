@@ -162,7 +162,7 @@ def Senate():
     return content 
 
 def Open():
-    content = ' Iberia and Maghreb: \n Badajoz'
+    content = ' Iberia/Maghreb: \n Badajoz \n Almoravids \n Memelars \n Almohads \n Algeria \n Tunis \n \n Italy: \n Papacy \n Spoleto \n Verona \n Pisa \n Savoie \n Lombard Minors \n Milan (May split) \n \n German HRE:  \n Burgundy (HRE Duchy) \n Aquileia'
     return content
 
 

@@ -162,7 +162,7 @@ def Senate():
     return content 
 
 def Open():
-    content = 'IberiaMaghreb Badajoz'
+    content = 'Iberia and Maghreb \n Badajoz'
     return content
 
 

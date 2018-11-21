@@ -163,6 +163,7 @@ def Senate():
 
 def Open():
     content = 'Iberia/Maghreb: \n Badajoz'
+    return content
 
 
 def Year():

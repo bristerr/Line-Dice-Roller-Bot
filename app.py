@@ -209,7 +209,7 @@ def handle_message(event):
             TextSendMessage(text=content))
         return 0
     
-    if event.message.text == "What's open?":
+    if event.message.text == "What\'s open":
         content = Open()
         line_bot_api.reply_message(
             event.reply_token,

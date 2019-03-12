@@ -156,6 +156,16 @@ def Anakin():
     content = random.choice(anakin)
     return content 
 
+def dynasty():
+    Habsburg = {
+  	    "Name": "Maximillian",
+  	    "Born": 1552,
+  	    "Age": 1637-1552,
+  	    "Wife": "Joanna von Stein"
+    }    
+    content = Habsburg.values() 
+    return content
+
 def Senate():
     senate = ['I am the senate.', 'No, NO, YOU WILL DIE!', '*Autistic screeching*', 'It\'s treason then.', 'Ironic. He could save others but not himself.', 'Power! UNLIMITED POWER!', 'Have you ever heard the tragedy of Darth Plagueis the Wise?']
     content = random.choice(senate)
@@ -197,6 +207,13 @@ def handle_message(event):
     
     if event.message.text == "anakin":
         content = Anakin()
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=content))
+        return 0
+    
+    if event.message.text == "dynasties":
+        content = dyansty()
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=content))

@@ -160,8 +160,7 @@ def dynasty():
     Habsburg = {
   	    "Name": "Maximillian",
   	    "Born": 1552,
-  	    "Age": 1637-1552,
-  	    "Wife": "Joanna von Stein"
+  	    "Age": 1637-1552
     }    
     content = Habsburg.values() 
     return content
@@ -212,7 +211,7 @@ def handle_message(event):
             TextSendMessage(text=content))
         return 0
     
-    if event.message.text == "dynasties":
+    if event.message.text == "Dynasties":
         content = dyansty()
         line_bot_api.reply_message(
             event.reply_token,

@@ -177,7 +177,7 @@ def Senate():
 
 def Year():
     import datetime 
-    start = datetime.date(2019, 8, 12)
+    start = datetime.date(2019, 8, 14)
     today = datetime.date.today()
     end_date = today- start
     year=end_date.days
@@ -232,7 +232,7 @@ def handle_message(event):
             TextSendMessage(text=content))
         return 0
     
-    if "the year" in event.message.text:
+    if " is the year" in event.message.text:
         content = Year()
         line_bot_api.reply_message(
             event.reply_token,

@@ -171,17 +171,17 @@ def Senate():
     return content 
 
 #def Open():
-    #content = ' Iberia/Maghreb: \n Badajoz \n Almoravids \n Memelars \n Almohads \n Algeria \n Tunis \n \n Italy: \n Papacy \n Spoleto \n Verona \n Pisa \n Savoie \n Lombard Minors \n Milan (May split) \n \n German HRE:  \n Burgundy (HRE Duchy) \n Aquileia \n Lower Lorraine (Will likely split) \n Upper Lorraine (Will likely split) \n Holland \n Utrecht \n Frisia \n East Frisia \n Baden \n Swabia (Will Likely Split) \n Messian \n North March (Brandenburg) \n Bavaria (Will likely weaken) \n Nordheim \n \n France: \n French Minors \n Brittany \n \n British Isles: \n Scotland \n Munster \n Leinster \n Other Irish minors \n Welsh minors \n Mann \n \n Eastern/Central European Pagans: \n Pomerania \n Mecklenburg \n Prussia \n Prussian Minors \n Lithuania (Not really united, in reality a confederation of tribes) \n \n Eastern European Christians: \n Kievan Rus’ \n Poland \n Other Russian States except Novgorod \n Steppe/Caucuses: \n Cumans \n Bulgars \n Circassian minors \n \n Middle East:  \n Edessa \n Seljuks \n Tripoli \n Seljuk Vassals'
+    #content = ' Iberia/Maghreb: \n Almoravids \n Memelars \n Almohads \n Algeria \n Tunis \n \n Italy: \n Papacy \n Spoleto \n Verona \n Pisa \n Savoie \n Lombard Minors \n Milan (May split) \n \n German HRE:  \n Burgundy (HRE Duchy) \n Aquileia \n Lower Lorraine (Will likely split) \n Upper Lorraine (Will likely split) \n Holland \n Utrecht \n Frisia \n East Frisia \n Baden \n Swabia (Will Likely Split) \n Messian \n North March (Brandenburg) \n Bavaria (Will likely weaken) \n Nordheim \n \n France: \n French Minors \n Brittany \n \n British Isles: \n Scotland \n Munster \n Leinster \n Other Irish minors \n Welsh minors \n Mann \n \n Eastern/Central European Pagans: \n Pomerania \n Mecklenburg \n Prussia \n Prussian Minors \n Lithuania (Not really united, in reality a confederation of tribes) \n \n Eastern European Christians: \n Kievan Rus’ \n Poland \n Other Russian States except Novgorod \n Steppe/Caucuses: \n Cumans \n Bulgars \n Circassian minors \n \n Middle East:  \n Edessa \n Seljuks \n Tripoli \n Seljuk Vassals'
     #return content
 
 
 def Year():
     import datetime 
-    start = datetime.date(2019, 8, 18)
+    start = datetime.date(2019, 11, 16)
     today = datetime.date.today()
     end_date = today- start
     year=end_date.days
-    content = 1920 + year/4
+    content = 1378 + year
     return content
 
 @handler.add(MessageEvent, message=TextMessage)

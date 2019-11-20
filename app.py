@@ -178,7 +178,7 @@ def BRoller():
 	content="Child"
 	birth=randint(1,4)
 	#if (birth < 4):
-		content+=str(birth)+", conception,"
+	#	content+=str(birth)+", conception,"
 	#else:
 	#	content+=str(birth)+", no conception,"
 	#death=randint(1,4)

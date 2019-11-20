@@ -177,11 +177,11 @@ def Senate():
 
 def Year():
     import datetime 
-    start = datetime.date(2019, 11, 16)
+    start = datetime.date(2019, 11, 19)
     today = datetime.date.today()
     end_date = today- start
     year=end_date.days
-    content = 1379 + year
+    content = 1382 + year*1.5
     return content
 
 @handler.add(MessageEvent, message=TextMessage)

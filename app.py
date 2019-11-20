@@ -174,6 +174,24 @@ def Senate():
     #content = ' Iberia/Maghreb: \n Almoravids \n Memelars \n Almohads \n Algeria \n Tunis \n \n Italy: \n Papacy \n Spoleto \n Verona \n Pisa \n Savoie \n Lombard Minors \n Milan (May split) \n \n German HRE:  \n Burgundy (HRE Duchy) \n Aquileia \n Lower Lorraine (Will likely split) \n Upper Lorraine (Will likely split) \n Holland \n Utrecht \n Frisia \n East Frisia \n Baden \n Swabia (Will Likely Split) \n Messian \n North March (Brandenburg) \n Bavaria (Will likely weaken) \n Nordheim \n \n France: \n French Minors \n Brittany \n \n British Isles: \n Scotland \n Munster \n Leinster \n Other Irish minors \n Welsh minors \n Mann \n \n Eastern/Central European Pagans: \n Pomerania \n Mecklenburg \n Prussia \n Prussian Minors \n Lithuania (Not really united, in reality a confederation of tribes) \n \n Eastern European Christians: \n Kievan Rus’ \n Poland \n Other Russian States except Novgorod \n Steppe/Caucuses: \n Cumans \n Bulgars \n Circassian minors \n \n Middle East:  \n Edessa \n Seljuks \n Tripoli \n Seljuk Vassals'
     #return content
 
+def BRoller():
+	content=""
+	birth=randint(1,4)
+	if (birth < 4):
+		content+=str(birth)+", conception,"
+	else:
+		content+=str(birth)+", no conception,"
+	death=randint(1,4)
+	if (1 < death):
+		content+=str(death)+", survives childhood,"
+	else:
+		content+=str(death)+", early death,"
+	gender=randint(1,2)
+	if (gender == 1):
+		content+=str(gender)+", boy"
+	else:
+		content+=str(gender)+", girl"
+    return content
 
 def Year():
     import datetime 
@@ -267,5 +285,11 @@ def handle_message(event):
             TextSendMessage(text=content))
         return 0
     
+    if ".birth" in event.message.text:
+        content = BRoller()
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=content))
+        return 0
 if __name__ == '__main__':
     app.run()

@@ -190,7 +190,7 @@ def BRoller():
 	#	content+=str(gender)+", boy"
 	#else:
 	#	content+=str(gender)+", girl"
-    	content = str(birth)
+    	#content = str(birth)
 	#return content
 
 def Year():

@@ -175,7 +175,7 @@ def Senate():
     #return content
 
 def BRoller():
-	birth=randint(1,4)
+	birth = randint(1,4)
 	#if (birth < 4):
 	#	content+=str(birth)+", conception,"
 	#else:
@@ -190,7 +190,7 @@ def BRoller():
 	#	content+=str(gender)+", boy"
 	#else:
 	#	content+=str(gender)+", girl"
-    	content=str(birth)
+    	content = str(birth)
 	return content
 
 def Year():

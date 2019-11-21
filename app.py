@@ -171,26 +171,28 @@ def Senate():
     return content 
 
 def Open():
-    content = 'Iberia/Maghreb: \n Granada \n Morocco  \n Tlemcen \n Tunis \n \n Italy: \n Florence \n Milan \n Verona \n Pisa \n Genoa \n Lombard Minors \n \n German HRE: \n Austria (Albertinian) \n Styrian Austria (Leopoldian) \n Utrecht \n Frisia \n East Frisia \n Baden \n Saxony \n Pomerania \n HRE Minors \n \n France: \n French Minors \n Berry \n \n Eastern/Central Europe: \n Teutonic Order \n Livonian Order \n Novgorod \n Moldavia \n Walachia \n Epirus \n Bosnia \n Pskov \n Tver \n Other Russian States \n \n Steppe/Caucuses/Middle East: \n Trebizond \n Jalayirids \n Golden Horde \n Kastamonu \n Dulkadir \n Georgia'
+    content = 'Iberia/Maghreb: \n Granada \n Morocco  \n Tlemcen \n Tunis \n \n Italy: \n Florence \n Verona \n Pisa \n Genoa \n Lombard Minors \n \n German HRE: \n Austria (Albertinian) \n Styrian Austria (Leopoldian) \n Utrecht \n Frisia \n East Frisia \n Baden \n Pomerania \n HRE Minors \n \n France: \n French Minors \n Berry \n \n Eastern/Central Europe: \n Teutonic Order \n Livonian Order \n Novgorod \n Moldavia \n Walachia \n Epirus \n Bosnia \n Pskov \n Tver \n Other Russian States \n \n Steppe/Caucuses/Middle East: \n Trebizond \n Jalayirids \n Golden Horde \n Kastamonu \n Dulkadir \n Georgia'
     return content
 
 def BRoller():
     birth=random.randint(1,4)
     content = ""
     if (birth < 4):
-        content+=str(birth) + ": conception, "
+        content+=str(birth) + ": conception"
     else:
-        content+=str(birth) + ": no conception, "
+        content+=str(birth) + ": no conception"
+        return content
     death=random.randint(1,4)
     if (1 < death):
-        content+=str(death)+": survives childhood, "
+        content+=", " + str(death)+": survives childhood"
     else:
-        content+=str(death)+": early death, "
+        content+=", " + str(death)+": early death"
+        return content
     gender=random.randint(1,2)
     if (gender == 1):
-        content+=str(gender)+": boy"
+        content+=", " + str(gender)+": boy"
     else:
-        content+=str(gender)+": girl"
+        content+=", " + str(gender)+": girl"
     return content
 
 def Year():

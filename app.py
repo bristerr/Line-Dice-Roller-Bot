@@ -171,7 +171,7 @@ def Senate():
     return content 
 
 def Open():
-    content = ' British Isles: \n England \n \n Iberia/Maghreb: \n Granada \n Morocco  \n Tlemcen \n Tunis \n \n Italy: \n Florence \n Milan \n Verona \n Pisa \n Genoa \n Lombard Minors \n \n German HRE: \n Austria (Albertinian) \n Styrian Austria (Leopoldian) \n Utrecht \n Frisia \n East Frisia \n Baden \n Saxony \n Pomerania \n HRE Minors \n \n France: \n French Minors \n Berry \n \n Eastern/Central Europe: \n Teutonic Order \n Livonian Order \n Novgorod \n Moldavia \n Walachia \n Epirus \n Bosnia \n Pskov \n Tver \n Other Russian States \n \n Steppe/Caucuses/Middle East: \n Trebizond \n Jalayirids \n Golden Horde \n Kastamonu \n Dulkadir \n Georgia'
+    content = 'Iberia/Maghreb: \n Granada \n Morocco  \n Tlemcen \n Tunis \n \n Italy: \n Florence \n Milan \n Verona \n Pisa \n Genoa \n Lombard Minors \n \n German HRE: \n Austria (Albertinian) \n Styrian Austria (Leopoldian) \n Utrecht \n Frisia \n East Frisia \n Baden \n Saxony \n Pomerania \n HRE Minors \n \n France: \n French Minors \n Berry \n \n Eastern/Central Europe: \n Teutonic Order \n Livonian Order \n Novgorod \n Moldavia \n Walachia \n Epirus \n Bosnia \n Pskov \n Tver \n Other Russian States \n \n Steppe/Caucuses/Middle East: \n Trebizond \n Jalayirids \n Golden Horde \n Kastamonu \n Dulkadir \n Georgia'
     return content
 
 def BRoller():

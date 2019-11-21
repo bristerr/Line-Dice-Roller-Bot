@@ -177,6 +177,7 @@ def Open():
 def BRoller():
     birth=random.randint(1,4)
     content = ""
+    #birth
     if (birth < 4):
         content+=str(birth) + ": conception"
     else:
@@ -193,6 +194,12 @@ def BRoller():
         content+=", " + str(gender)+": boy"
     else:
         content+=", " + str(gender)+": girl"
+    #stats
+    health=random.randint(1,12)
+    admin=random.randint(1,6)
+    charisma=random.randint(1,6)
+    integrity=random.randint(1,6)
+    content+= " | " + "health: " + str(health) + ", admin: " + str(admin) +", charisma: "+ str(charisma) +", integrity: " + str(integrity)
     return content
 
 def Year():

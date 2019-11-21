@@ -175,18 +175,18 @@ def Open():
     return content
 
 def BRoller():
-    birth=3
+    birth=random.randint(1,4)
     content = ""
     if (birth < 4):
         content+=str(birth) + ": conception, "
     else:
         content+=str(birth) + ": no conception, "
-    death=2
+    death=random.randint(1,4)
     if (1 < death):
         content+=str(death)+": survives childhood, "
     else:
         content+=str(death)+": early death, "
-    gender=1
+    gender=random.randint(1,2)
     if (gender == 1):
         content+=str(gender)+": boy"
     else:

@@ -175,24 +175,23 @@ def Open():
     return content
 
 def BRoller():
-    birth=randint(1,4)
-    content = "f"
-    if (birth == 4):
-    	content=str(birth) #+ "conception"
+    birth=3
+    content = ""
+    if (birth < 4):
+        content+=str(birth) + ": conception, "
     else:
-        return 0
-	#content+=str(birth) + "no conception"
-    #death=randint(1,4)
-	#if (1 < death):
-	#	content+=str(death)+", survives childhood,"
-	#else:
-	#	content+=str(death)+", early death,"
-	#gender=randint(1,2)
-	#if (gender == 1):
-	#	content+=str(gender)+", boy"
-	#else:
-	#	content+=str(gender)+", girl"
-    #return content
+        content+=str(birth) + ": no conception, "
+    death=2
+    if (1 < death):
+        content+=str(death)+": survives childhood, "
+    else:
+        content+=str(death)+": early death, "
+    gender=1
+    if (gender == 1):
+        content+=str(gender)+": boy"
+    else:
+        content+=str(gender)+": girl"
+    return content
 
 def Year():
     import datetime 

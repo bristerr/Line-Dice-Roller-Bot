@@ -174,6 +174,15 @@ def Open():
     content = 'Iberia/Maghreb: \n Granada \n Morocco  \n Tlemcen \n Tunis \n \n Italy: \n Florence \n Verona \n Pisa \n Genoa \n Lombard Minors \n \n German HRE: \n Austria (Albertinian) \n Styrian Austria (Leopoldian) \n Utrecht \n Frisia \n East Frisia \n Baden \n Pomerania \n HRE Minors \n \n France: \n French Minors \n Berry \n \n Eastern/Central Europe: \n Teutonic Order \n Livonian Order \n Novgorod \n Moldavia \n Walachia \n Epirus \n Bosnia \n Pskov \n Tver \n Other Russian States \n \n Steppe/Caucuses/Middle East: \n Trebizond \n Jalayirids \n Golden Horde \n Kastamonu \n Dulkadir \n Georgia'
     return content
 
+def Year():
+    import datetime 
+    start = datetime.date(2019, 11, 19)
+    today = datetime.date.today()
+    end_date = today- start
+    year=end_date.days
+    content = 1382 + year*1.5
+    return content
+
 def BRoller():
     birth=random.randint(1,4)
     content = ""
@@ -199,16 +208,7 @@ def BRoller():
     admin=random.randint(1,6)
     charisma=random.randint(1,6)
     integrity=random.randint(1,6)
-    content+= " | " + "health: " + str(health) + ", admin: " + str(admin) +", charisma: "+ str(charisma) +", integrity: " + str(integrity)
-    return content
-
-def Year():
-    import datetime 
-    start = datetime.date(2019, 11, 19)
-    today = datetime.date.today()
-    end_date = today- start
-    year=end_date.days
-    content = 1382 + year*1.5
+    content+= str(Year()) + " | " + "health: " + str(health) + ", admin: " + str(admin) +", charisma: "+ str(charisma) +", integrity: " + str(integrity)
     return content
 
 @handler.add(MessageEvent, message=TextMessage)

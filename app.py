@@ -200,9 +200,9 @@ def BRoller():
         return content
     gender=random.randint(1,2)
     if (gender == 1):
-        content+=", " + str(gender)+": boy"
+        content+=", " + str(gender)+": Male"
     else:
-        content+=", " + str(gender)+": girl"
+        content+=", " + str(gender)+": Female"
     #stats
     health=random.randint(1,12)
     admin=random.randint(1,6)

@@ -175,12 +175,12 @@ def Senate():
     #return content
 
 def BRoller():
-    birth = randint(1,4)
+    birth=randint(1,4)
     content = "f"
-    if (birth < 4):
-    	content+=str(birth) + ", conception,"
+    if (birth == 4):
+    	content+=str(birth) + "conception"
     else:
-	content+=str(birth) + ", no conception,"
+	content+=str(birth) + "no conception"
     #death=randint(1,4)
 	#if (1 < death):
 	#	content+=str(death)+", survives childhood,"

@@ -170,9 +170,9 @@ def Senate():
     content = random.choice(senate)
     return content 
 
-#def Open():
-    #content = ' Iberia/Maghreb: \n Almoravids \n Memelars \n Almohads \n Algeria \n Tunis \n \n Italy: \n Papacy \n Spoleto \n Verona \n Pisa \n Savoie \n Lombard Minors \n Milan (May split) \n \n German HRE:  \n Burgundy (HRE Duchy) \n Aquileia \n Lower Lorraine (Will likely split) \n Upper Lorraine (Will likely split) \n Holland \n Utrecht \n Frisia \n East Frisia \n Baden \n Swabia (Will Likely Split) \n Messian \n North March (Brandenburg) \n Bavaria (Will likely weaken) \n Nordheim \n \n France: \n French Minors \n Brittany \n \n British Isles: \n Scotland \n Munster \n Leinster \n Other Irish minors \n Welsh minors \n Mann \n \n Eastern/Central European Pagans: \n Pomerania \n Mecklenburg \n Prussia \n Prussian Minors \n Lithuania (Not really united, in reality a confederation of tribes) \n \n Eastern European Christians: \n Kievan Rus’ \n Poland \n Other Russian States except Novgorod \n Steppe/Caucuses: \n Cumans \n Bulgars \n Circassian minors \n \n Middle East:  \n Edessa \n Seljuks \n Tripoli \n Seljuk Vassals'
-    #return content
+def Open():
+    content = ' British Isles: \n England \n \n Iberia/Maghreb: \n Granada \n Morocco  \n Tlemcen \n Tunis \n \n Italy: \n Florence \n Milan \n Verona \n Pisa \n Genoa \n Lombard Minors \n \n German HRE: \n Austria (Albertinian) \n Styrian Austria (Leopoldian) \n Utrecht \n Frisia \n East Frisia \n Baden \n Saxony \n Pomerania \n HRE Minors \n \n France: \n French Minors \n Berry \n \n Eastern/Central Europe: \n Teutonic Order \n Livonian Order \n Novgorod \n Pskov \n Tver \n Other Russian States #\n Steppe/Caucuses: \n Cumans \n Bulgars \n Circassian minors \n \n Middle East:  \n Edessa \n Seljuks \n Tripoli \n Seljuk Vassals'
+    return content
 
 def BRoller():
     birth=randint(1,4)

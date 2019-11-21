@@ -191,7 +191,7 @@ def BRoller():
 	#	content+=str(gender)+", boy"
 	#else:
 	#	content+=str(gender)+", girl"
-    return content
+    #return content
 
 def Year():
     import datetime 

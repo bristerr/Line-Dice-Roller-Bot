@@ -208,7 +208,7 @@ def BRoller():
     admin=random.randint(1,6)
     charisma=random.randint(1,6)
     integrity=random.randint(1,6)
-    content+= str(Year()) + " | " + "health: " + str(health) + ", admin: " + str(admin) +", charisma: "+ str(charisma) +", integrity: " + str(integrity)
+    content+= " | " + str(Year()) + " | " + "H" + str(health) + " A" + str(admin) +" C"+ str(charisma) +" I" + str(integrity)
     return content
 
 @handler.add(MessageEvent, message=TextMessage)

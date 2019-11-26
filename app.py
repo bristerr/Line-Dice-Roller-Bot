@@ -259,35 +259,7 @@ def handle_message(event):
             TextSendMessage(text=content))
         return 0
     
-    if "what's the year" in event.message.text:
-        content = Year()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    
-    if "the year?" in event.message.text:
-        content = Year()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    
-    if "is the year" in event.message.text:
-        content = Year()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    
-    if "year is it" in event.message.text:
-        content = Year()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    
-    if "What year" in event.message.text:
+    if "what\'s the year" or "the year?" or "is the year" or "What year" in event.message.text:
         content = Year()
         line_bot_api.reply_message(
             event.reply_token,

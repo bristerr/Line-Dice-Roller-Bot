@@ -259,14 +259,14 @@ def handle_message(event):
             TextSendMessage(text=content))
         return 0
     
-    if "the year" and "What" in event.message.text:
+    if "the year" and "What is the" in event.message.text:
         content = Year()
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=content))
         return 0
     
-    if "year is it" and "What" in event.message.text:
+    if "year is it" and "What year" in event.message.text:
         content = Year()
         line_bot_api.reply_message(
             event.reply_token,

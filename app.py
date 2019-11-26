@@ -259,7 +259,7 @@ def handle_message(event):
             TextSendMessage(text=content))
         return 0
     
-    if "year" and "What" and NOT "yearly" and NOT "years" and NOT "you" and NOT "born" in event.message.text:
+    if "year" and "What" and not "yearly" and not "years" and not "you" and not "born" in event.message.text:
         content = Year()
         line_bot_api.reply_message(
             event.reply_token,

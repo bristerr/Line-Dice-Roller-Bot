@@ -176,12 +176,12 @@ def Open():
 
 def Year():
     import datetime 
-    start = datetime.date(2019, 11, 19)
+    start = datetime.date(2019, 12, 4)
     today = datetime.date.today()
     end_date = today- start
     year=end_date.days
-    #content = 1382 + year*1.5
-    content = 'The year is paused at 1415'
+    content = 1382 + year*1.5
+    #content = 'The year is paused at 1415'
     return content
 
 def BRoller():

@@ -185,15 +185,15 @@ def Year():
     return content
 
 def BRoller():
-    birth=random.randint(1,4)
+    birth=random.randint(1,3)
     content = ""
     #birth
-    if (birth < 4):
+    if (birth < 3):
         content+=str(birth) + ": conception"
     else:
         content+=str(birth) + ": no conception"
         return content
-    death=random.randint(1,4)
+    death=random.randint(1,3)
     if (1 < death):
         content+=", " + str(death)+": survives childhood"
     else:

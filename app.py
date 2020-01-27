@@ -176,11 +176,11 @@ def Open():
 
 def Year():
     import datetime 
-    start = datetime.date(2019, 12, 15)
+    start = datetime.date(2019, 12, 9)
     today = datetime.date.today()
     end_date = today- start
     year=end_date.days
-    content = 1382 + year*1.5
+    content = 1380 + year
     #content = 'The year is paused at 1415'
     return content
 

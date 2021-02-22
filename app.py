@@ -3,7 +3,6 @@ import re
 import random
 import configparser
 from bs4 import BeautifulSoup
-from flask import Flask, request
 from imgurpython import ImgurClient
 from random import randint
 from linebot import (

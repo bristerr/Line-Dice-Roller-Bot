@@ -6,7 +6,7 @@ Flask-Babel==0.11.1
 Flask-Script==2.0.5
 httplib2==0.19.0      
 itsdangerous  
-Jinja2==2.10.1        
+Jinja2==3.1.2        
 Mako==1.0.6           
 MarkupSafe  
 oauth2==1.9.0.post1
